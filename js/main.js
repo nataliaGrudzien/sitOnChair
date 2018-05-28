@@ -51,7 +51,18 @@ nextPicture.addEventListener("click", moveSlideRight);
 setInterval(moveSlideRight, 5000);
 clearInterval(1);
 
+//shopwindow
 
+var popup = document.querySelectorAll(".popup");
+
+for(var item of popup) {
+	item.addEventListener("mouseover", function() {
+		this.style.opacity = 0;
+	});
+	item.addEventListener("mouseout", function() {
+		this.style.opacity = 1;
+	});
+}
 
 
 

@@ -103,6 +103,7 @@ for (var item of arrows) {
 
 var choices = document.querySelectorAll(".list_panel > li");
 var sum = 0;
+var total = 0;
 var order = document.querySelector(".sum");
 
 for (var item of choices) {
@@ -114,11 +115,9 @@ for (var item of choices) {
 		var color_value = document.querySelector(".color.value");
 		var pattern_value = document.querySelector(".pattern.value");
 		
-		
 		if(this.innerText == "Clair" || this.innerText == "Margarita" || this.innerText == "Selena") {
 			title.innerText = this.innerText;
 			title_value.innerText = this.dataset.price;
-
 		}
 
 		if(this.innerText == "Czerwony" || this.innerText == "Czarny" || this.innerText == "Pomarańczowy") {
@@ -130,8 +129,9 @@ for (var item of choices) {
 			pattern.innerText = this.innerText;
 			pattern_value.innerText = this.dataset.price;
 		}
-		sum = Number(pattern_value.innerText)+Number(color_value.innerText)+Number(title_value.innerText);
-		order.innerText = sum;
+
+		sum = Number(title_value.innerText)+Number(color_value.innerText)+Number(pattern_value.innerText);
+		order.innerText = sum + total;
 		this.parentElement.style.display = "none";
 	});
 }
@@ -139,21 +139,21 @@ for (var item of choices) {
 	var transport = document.querySelector(".transport");
 	var transport_value = document.querySelector(".transport.value");
 	var transport_checkbox = document.getElementById("transport");
-	transport_checkbox.addEventListener("change", function(){
+	transport_checkbox.addEventListener("change", function trans_calc(){
 		if (transport_checkbox.checked == true) {
 			transport.innerText = "Transport";
 			transport_value.innerText = transport_checkbox.dataset.price;
 			
-			sum += Number(transport_checkbox.dataset.price);
+			total += Number(transport_checkbox.dataset.price);
 			
 		} else {
 			transport.innerText = "";
 			transport_value.innerText = "";
 			
-			sum -= Number(transport_checkbox.dataset.price);
+			total -= Number(transport_checkbox.dataset.price);
 		}
-		order.innerText = sum;
-	})
+		order.innerText = sum + total;
+	});
 
 
 

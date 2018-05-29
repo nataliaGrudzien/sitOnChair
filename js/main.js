@@ -117,21 +117,24 @@ for (var item of choices) {
 		
 		if(this.innerText == "Clair" || this.innerText == "Margarita" || this.innerText == "Selena") {
 			title.innerText = this.innerText;
+			this.parentElement.parentElement.firstChild.nextElementSibling.innerText = this.innerText;
 			title_value.innerText = this.dataset.price;
 		}
 
 		if(this.innerText == "Czerwony" || this.innerText == "Czarny" || this.innerText == "Pomarańczowy") {
 			color.innerText = this.innerText;
+			this.parentElement.parentElement.firstChild.nextElementSibling.innerText = this.innerText;
 			color_value.innerText = this.dataset.price;
 		}
 
 		if(this.innerText == "Tkanina" || this.innerText == "Skóra") {
 			pattern.innerText = this.innerText;
+			this.parentElement.parentElement.firstChild.nextElementSibling.innerText = this.innerText;
 			pattern_value.innerText = this.dataset.price;
 		}
 
 		sum = Number(title_value.innerText)+Number(color_value.innerText)+Number(pattern_value.innerText);
-		order.innerText = sum + total;
+		order.innerText = sum + total + " zł";
 		this.parentElement.style.display = "none";
 	});
 }
@@ -152,11 +155,7 @@ for (var item of choices) {
 			
 			total -= Number(transport_checkbox.dataset.price);
 		}
-		order.innerText = sum + total;
+		order.innerText = sum + total + " zł";
 	});
-
-
-
-
 
 });

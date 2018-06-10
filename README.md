@@ -2,4 +2,4 @@
 neat and tidy page for small company
 
 ---------------------
-this is readme file
+<img alt="sitOnChair" src="images/sitOnChair_view.jpg" width="400">

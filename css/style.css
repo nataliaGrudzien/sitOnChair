@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 	font-family: 'ralewayregular', 'Arial', sans-serif;
 	font-size: 12px;
-	/*border: 1px solid red;*/
 }
 
 a:hover, input[type="submit"]:hover {
@@ -14,7 +13,6 @@ a:hover, input[type="submit"]:hover {
 .container {
 	margin: 0 auto;
 	padding: 0 100px;
-
 }
 
 .clearfix::after {
@@ -174,10 +172,12 @@ nav > ul > li ul li a {
 	position: absolute;
 	transition: 0.5s ease-out;
 	left: -1000px;
+	opacity: 0;
 }
 
 .chairs .visible {
 	position: relative;
+	opacity: 1;
     left: 0;
 }
 
@@ -333,6 +333,7 @@ nav > ul > li ul li a {
 	height: 450px;
 	margin-top: 50px;
 	position: relative;
+	transition: 0.5s;
 }
 
 .box :nth-child(2) {
@@ -359,14 +360,13 @@ nav > ul > li ul li a {
 .box :nth-child(3) span:nth-child(1) {
 	font-size: 3rem;
 	color: #c2c2c2;
-	/*border: 1px solid red;*/
 }
 
 .box :nth-child(3) span:nth-child(2) {
 	font-size: 1rem;
 	color: #c2c2c2;
-	/*vertical-align: super;
-	border: 1px solid green;*/
+	position: relative;
+	top: -15px;
 }
 
 .box :nth-child(4), .box :nth-child(6){
@@ -374,7 +374,6 @@ nav > ul > li ul li a {
 	background-color: #e1e1e1;
 	font-size: 1.2rem;
 	padding: 10px 0;
-	
 }
 
 .box :nth-child(5), .box :nth-child(7) {
@@ -447,22 +446,20 @@ nav > ul > li ul li a {
 .application {
   background-color: #f9f9f9;
   padding:30px 0;
-  height: 450px;
+  /*height: 450px;*/
 }
 
 .application .container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	/*flex-wrap: wrap;*/
 }
 
 
 .inline {
-  /*display:inline-block;*/
   width:400px;
   padding:14px;
-  /*vertical-align: top;*/
- /* border: 1px dashed orange*/
 }
 
 
@@ -566,7 +563,6 @@ nav > ul > li ul li a {
   height:195px;
   padding:10px;
   margin-top: 50px;
-  ;
 }
 
 .application .green_button {
@@ -690,7 +686,7 @@ nav > ul > li ul li a {
 
 .contact > div > form input {
 	display: block;
-	width: 700px;
+	width: 600px;
 	margin: 20px 20px 20px 0;
 	padding: 15px 5px;
 	border: 1px solid rgba(20, 184, 160, .3);
@@ -698,7 +694,7 @@ nav > ul > li ul li a {
 
 .contact > div > form textarea {
 	resize: none;
-	width: 700px;
+	width: 600px;
 	height: 150px;
 	padding: 15px 5px;
 	border: 1px solid rgba(20, 184, 160, .3);
